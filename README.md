@@ -18,3 +18,7 @@ Generate a server config and write down Endpoint+port, as well as the wg public 
 
 If necessary, you can change AllowedIPs, dns, ip address for user config
 
+wg-delete-user.sh
+-
+The script is used for easy deletion of keys and custom configurations.
+Please note the script does not yet remove users from the wireguard server config
