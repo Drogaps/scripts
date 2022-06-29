@@ -19,7 +19,7 @@ cd "$DIR"
 DBS=( $(sudo -u postgres $PSQL --list --tuples-only |
           awk '!/template[01]/ && $1 != "|" {print $1}') )
 
-# first dump entire postgres database, including pg_shadow etc.
+static_etcfiles_backuping# first dump entire postgres database, including pg_shadow etc.
 sudo -u postgres $DUMPALL --column-inserts | gzip -9 > "$DIR/db.out.gz"
 
 # next dump globals (roles and tablespaces) only
