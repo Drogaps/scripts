@@ -1,5 +1,6 @@
 #!/bin/bash
-VALUE="$(tail -1 /etc/wireguard/wg0.conf | awk '{print $3}' | awk -F"," '{print $1}' | awk -F"." '{print $4}' | awk -F"/" '{print $1}' | head -n 1)"
+VALUE="$(tail -4 /etc/wireguard/wg0.conf | grep -i AllowedIPs | awk '{print $3}' | awk -F"," '{print $1}' | awk -F"." '{print $4}' | awk -F"/" '{print $1}' | head -n 1)"
+
 WGCONF='/etc/wireguard/wg0.conf'
 CLIENTS_KEY='/etc/wireguard/clients_keys/'
 
