@@ -22,3 +22,7 @@ wg-delete-user.sh
 -
 The script is used for easy deletion of keys and custom configurations.
 The script also removes user data from the server config
+
+wgmaster.sh
+-
+In fact, this script combines the advantages of both wg-create scripts.sh and wg-delete-user.sh . And makes all settings and controls more simplified. The only thing in it is not possible to install several client configs in parallel.
